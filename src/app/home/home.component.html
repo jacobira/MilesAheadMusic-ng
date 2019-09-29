@@ -1,0 +1,84 @@
+
+<!-- Layer 1 -->
+<div class="super">
+  <video autoplay loop autobuffer muted playsinline id="studioVid">
+      <source src="../../assets/site-media/MilesAheadBackgroundVid.mp4">
+  </video>
+</div>
+
+
+<!-- Layer 2 -->
+<div class="content">
+  <div class="vidOverlay">
+      <div class="sellPoint">
+          <div class="mainText">
+              Music Lessons on Any Instrument
+          </div>
+          <div class="subText">
+              Best Teachers. Best Price. Any Instrument.
+          </div>
+      </div>
+      <div class="enrollBtn" onclick="displayForm()">
+          Get A Quote
+      </div>
+  </div>
+
+  <div class="missionStatement">
+      <div class="text">
+              We offer the highest quality lessons at an affordable price so that you can become 
+              the musician YOU want to become. Miles Ahead Music is made of hand selected teachers 
+              who have proven to be the very best at what they do.
+      </div>
+  </div>
+  <div class="instructorsHeading">
+      Meet our Teachers!
+  </div>
+  <app-teacher-display class="instructors"></app-teacher-display>
+  <div class="reviews">
+      <div class="stars"></div>
+      <div class="starsSubHead">
+          We Maintain a Five Star Rating!
+      </div>
+      <div class="realReviews">
+          <app-single-review *ngFor="let review of reviews" [reviewer]="review.reviewerName"
+          [relationship]="review.relationship" [review]="review.review" [reviewId]="review.reviewId"></app-single-review>
+      </div>
+  </div>
+  <div class="recommendSec">
+      <a href="https://www.summerhaysmusic.com" target="_blank">
+          <div class="storeLogo"></div>
+      </a>
+      <div class="storeText">
+          Wondering where to buy or rent an instrument? Check out Summerhays, our favorite music store!
+          <br>
+          <br>
+          www.summerhaysmusic.com
+      </div>
+  </div>
+</div>
+
+
+
+<div class="infoPop hidden" id="pop1">
+  <div class="information">
+      Fall 2019 Enrollment Sale!<br><br>
+      Register Now and Save 15% on Lessons!
+      <div class="popBtn">
+           Click here to get started!
+      </div>
+  </div>
+  <div class="exitBtn" onclick="hidePop()">
+      X
+  </div>
+</div>
+
+<div class="modalForm hidden" id="form">
+  <div class="modalFormBox">
+      <div class="exitBtn" onclick="exitModal()">
+          X
+      </div>
+      <div class="modalContent" id="modalContent">
+          
+      </div>
+  </div>
+</div>

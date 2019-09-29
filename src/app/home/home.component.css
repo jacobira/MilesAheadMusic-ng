@@ -1,0 +1,120 @@
+.super {
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: 100px;
+  overflow: hidden;
+  z-index: 1;
+}
+.super #studioVid {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+.content .vidOverlay {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.content .vidOverlay .sellPoint {
+  color: white;
+  font-family: 'Sacramento', cursive;
+  text-align: center;
+  text-shadow: 0 0 5px black, 0 0 5px black, 0 0 10px black, 0 0 10px black, 0 0 15px black;
+  margin-bottom: 50px;
+}
+.content .vidOverlay .sellPoint .mainText {
+  font-size: 40px;
+  margin-top: 160px;
+  margin-bottom: 10px;
+}
+.content .vidOverlay .sellPoint .subText {
+  width: 200px;
+  margin: 0 auto;
+  font-size: 15px;
+  font-family: 'Julius Sans One', sans-serif;
+}
+.content .vidOverlay .enrollBtn {
+  height: 100px;
+  width: 90%;
+  font-family: 'Sacramento', cursive;
+  border-radius: 10px;
+  background-color: #1f1d1d;
+  color: white;
+  font-size: 30px;
+  text-shadow: 0 0 2px black;
+  box-shadow: 0 0 15px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 320px;
+  transition: .2s;
+  cursor: pointer;
+}
+@media screen and (min-width: 500px) {
+  .content .vidOverlay .enrollBtn {
+    width: 200px;
+    border-radius: 50px;
+    top: 250px;
+  }
+}
+.content .missionStatement {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-top: 180px;
+}
+.content .missionStatement .text {
+  width: 60%;
+  font-size: 15px;
+  color: #383636;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+.content .instructorsHeading {
+  font-size: 40px;
+  font-family: "Sacramento", cursive;
+  text-align: center;
+  background-color: white;
+  margin-top: 50px;
+}
+.content .instructors {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.content .reviews {
+  width: 100%;
+}
+.content .reviews .stars {
+  height: 50px;
+  width: 260px;
+  margin: 0 auto;
+  background-image: url("../../assets/site-media/fiveStars.png");
+  background-size: cover;
+}
+.content .reviews .starsSubHead {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: 'Sacramento', cursive;
+}
+.content .reviews .realReviews {
+  margin-top: 50px;
+}
+.hidden {
+  display: none;
+}

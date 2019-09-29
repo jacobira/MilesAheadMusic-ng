@@ -1,0 +1,29 @@
+.singleReview {
+  height: 500px;
+  width: 90%;
+  color: white;
+  text-shadow: 0 0 5px black, 0 0 5px black, 0 0 10px black, 0 0 15px black, 0 0 20px black;
+  border-radius: 7px;
+  margin-left: 5%;
+  margin-bottom: 20px;
+  transition: .4s;
+}
+.singleReview .review {
+  font-size: 20px;
+  height: 70%;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.singleReview .reviewerName {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+}
+.singleReview .relationship {
+  font-size: 18px;
+  text-align: center;
+}

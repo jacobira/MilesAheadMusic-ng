@@ -1,0 +1,45 @@
+.header {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    display: flex;
+    font-family: 'Julius Sans One', sans-serif;
+    z-index: 1000;
+
+    .logo {
+        height: 100px;
+        width: 100px;
+        margin-left: 0;
+        margin-top: 0;
+        background-image: url('../../assets/site-media/milesAheadLogo.png');
+        background-size: cover;
+        @media screen and (min-width: 500px){
+            height: 200px;
+            width: 200px;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        };
+        transition: .2s;
+    }
+    .navSection {
+        width: ~"calc(100% - 140px)";
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        @media screen and (min-width: 500px){
+            padding-left: 50px;
+            padding-right: 50px;
+            width: ~"calc(100% - 340px)";
+            font-size: 30px;
+        }
+
+        .navBtn {
+            text-align: center;
+        }
+    }
+}
