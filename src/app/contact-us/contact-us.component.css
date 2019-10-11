@@ -1,0 +1,145 @@
+.content {
+  width: 100%;
+  position: absolute;
+}
+.content .titleText {
+  height: 100px;
+  width: calc(100% - 40px);
+  padding: 20px;
+  margin-top: 120px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Sacramento', cursive;
+  font-size: 40px;
+}
+.content .infoSection {
+  width: 100%;
+}
+.content .infoSection .mapSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .infoSection .mapSection .mapDisplay {
+  height: 200px;
+  width: 300px;
+  box-shadow: 0 0 10px black;
+  border-radius: 5px;
+  background-image: url("../../assets/site-media/milesAheadMap.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .2s;
+}
+.content .infoSection .mapSection .mapDisplay:hover {
+  transform: scale(1.05);
+  transition: .2s;
+}
+.content .infoSection .mapSection .mapDisplay div {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  text-shadow: 0 0 5px black, 0 0 5px black, 0 0 10px black;
+}
+.content .infoSection .mapSection a {
+  text-decoration: none;
+}
+.content .infoSection .infoDetails {
+  width: 100%;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.content .infoSection .infoDetails div {
+  margin: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 20px;
+}
+.content .infoSection .infoDetails .address .addressIcon {
+  height: 50px;
+  width: 50px;
+  background-image: url(../../assets/site-media/addressIcon.png);
+  background-size: cover;
+}
+.content .infoSection .infoDetails .address .streetAddress {
+  display: block;
+  width: auto;
+}
+.content .infoSection .infoDetails .email .emailIcon {
+  height: 50px;
+  width: 50px;
+  background-image: url(../../assets/site-media/emailIcon.png);
+  background-size: cover;
+}
+.content .infoSection .infoDetails .email .emailAddress {
+  display: block;
+  width: auto;
+}
+.content .infoSection .infoDetails .phone .phoneIcon {
+  height: 50px;
+  width: 50px;
+  background-image: url(../../assets/site-media/phoneIcon.png);
+  background-size: cover;
+}
+.content .infoSection .infoDetails .phone .phoneNumber {
+  width: auto;
+  display: block;
+}
+.content .infoSection .formBtnSec {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .infoSection .formBtnSec .formBtn {
+  height: 90px;
+  width: 250px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 45px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1d1d;
+  transition: .2s;
+  cursor: pointer;
+}
+.content .infoSection .formBtnSec .formBtn:hover {
+  transform: scale(1.05);
+  transition: .2s;
+}
+.content .infoSection .dropInTitle {
+  height: 50px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  text-align: center;
+}
+.content .infoSection .hoursSec {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.content .infoSection .hoursSec .studioPic {
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-image: url('../../assets/site-media/studioPic2.jpg');
+  background-size: cover;
+}
+.content .infoSection .hoursSec .hoursInfo {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 25px;
+}
