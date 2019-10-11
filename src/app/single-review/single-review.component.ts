@@ -8,21 +8,16 @@ import { ReviewBackgroundsService } from '../review-backgrounds.service';
 })
 export class SingleReviewComponent implements OnInit {
 
-  constructor(private backgroundService: ReviewBackgroundsService) {
-    this.getBackground();
+  constructor(private backgroundServ: ReviewBackgroundsService) {
+    this.backgroundImgClass = this.backgroundServ.pickImage();
   }
 
   ngOnInit() {
     
   }
 
-  getBackground(){
-    let image = this.backgroundService.pickImage();
-    console.log(image);
-    this.backgroundUrl = "url('../../assets/site-media/" + image + "')"
-  }
 
-  backgroundUrl: string;
+  backgroundImgClass: string;
 
   @Input() reviewer: string;
   @Input() relationship: string;

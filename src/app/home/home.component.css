@@ -19,6 +19,7 @@
   width: 100%;
   position: absolute;
   z-index: 2;
+  font-family: 'Quicksand', sans-serif;
 }
 .content .vidOverlay {
   height: 300px;
@@ -91,13 +92,11 @@
   text-align: center;
   background-color: white;
   margin-top: 50px;
-}
-.content .instructors {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 .content .reviews {
   width: 100%;
+  margin-top: 50px;
 }
 .content .reviews .stars {
   height: 50px;
@@ -114,6 +113,35 @@
 }
 .content .reviews .realReviews {
   margin-top: 50px;
+}
+.content .recommendSec {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #3d3a3a;
+  margin-bottom: 100px;
+}
+.content .recommendSec .storeLogo {
+  height: 180px;
+  width: 180px;
+  border-radius: 90px;
+  background-image: url("../../assets/site-media/SummerhaysLogo.jpeg");
+  background-size: cover;
+  cursor: pointer;
+  transition: .2s;
+  margin: 0 auto;
+}
+.content .recommendSec .storeLogo:hover {
+  transform: scale(1.05);
+  transition: .2s;
+}
+.content .recommendSec .storeText {
+  width: 90%;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 5%;
+  margin-top: 20px;
 }
 .hidden {
   display: none;

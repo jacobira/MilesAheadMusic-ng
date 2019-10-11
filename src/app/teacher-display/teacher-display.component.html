@@ -1,3 +1,18 @@
-<p>
-  teacher-display works!
-</p>
+<div class="cardViewport" id="cardViewport">
+  <div class="item" id="{{teacher.id}}" onmouseover="" *ngFor="let teacher of teachers">
+    <div>
+      <div class="instructorPhoto {{teacher.id}}">
+
+      </div>
+      <div class="instructorName">
+          {{teacher.name}}
+      </div>
+      <div class="instructorDesc">
+          {{teacher.basicDes}}
+      </div>
+      <div class="seeBioBtn" onclick="">
+          
+      </div>
+    </div>
+  </div>
+</div>

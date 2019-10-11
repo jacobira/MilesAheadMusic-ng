@@ -7,6 +7,7 @@
   margin-left: 5%;
   margin-bottom: 20px;
   transition: .4s;
+  background-size: cover;
 }
 .singleReview .review {
   font-size: 20px;
@@ -26,4 +27,13 @@
 .singleReview .relationship {
   font-size: 18px;
   text-align: center;
+}
+.studioPic1 {
+  background-image: url('../../assets/site-media/studioPic1.jpg');
+}
+.studioPic2 {
+  background-image: url('../../assets/site-media/studioPic2.jpg');
+}
+.studioPic3 {
+  background-image: url('../../assets/site-media/studioPic3.jpg');
 }
