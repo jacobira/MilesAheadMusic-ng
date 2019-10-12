@@ -1,5 +1,5 @@
 .footer {
-  height: 70px;
+  height: 60px;
   width: 100%;
   font-size: 12px;
   color: white;
@@ -10,5 +10,4 @@
   background-color: #1f1d1d;
   z-index: 2;
   position: absolute;
-  top: calc(100% - 70px);
 }
