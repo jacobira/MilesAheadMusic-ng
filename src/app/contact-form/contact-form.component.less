@@ -4,7 +4,6 @@
     width: 100%;
     background-color: rgba(0,0,0, .85);
     z-index: 50;
-    
 
     .form {
         color: white;
@@ -29,5 +28,36 @@
         .parentName {
             
         }
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            .submitBtn {
+                height: 50px;
+                width: 100px;
+                background-color: rgb(31, 29, 29);
+                border-radius: 5px;
+                box-shadow: 0 0 5px white, 0 0 5px green;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .formStatus {
+                height: 50px;
+                width: 150px;
+                background-color: lightgreen;
+                text-align: center;
+                border-radius: 5px;
+                text-shadow: 0 0 5px black;
+            }
+            .exitBtn {
+                font-size: 30px;
+                margin-top: 10px;
+            }
+        }
     }
+}
+.hidden {
+    display: none;
 }

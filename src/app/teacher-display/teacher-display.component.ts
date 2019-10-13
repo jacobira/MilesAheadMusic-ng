@@ -21,28 +21,30 @@ export class TeacherDisplayComponent implements AfterViewInit {
   indexCounter: number = this.teachers.length;
 
   mobileScrollStackCheck(){
-    let view = document.getElementById('cardViewport').getBoundingClientRect();
+    if(document.getElementById('cardViewport')){
+      let view = document.getElementById('cardViewport').getBoundingClientRect();
     
-    for(let i=0; i<this.teachers.length; i++){
+      for(let i=0; i<this.teachers.length; i++){
 
-      let card = document.getElementById(this.teachers[i].id);
-      let rect = card.getBoundingClientRect();
+        let card = document.getElementById(this.teachers[i].id);
+        let rect = card.getBoundingClientRect();
 
-      if(rect.top >= 0 && rect.left >= 0 && rect.bottom <=(window.innerHeight || document.documentElement.clientHeight) && 
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)){
-        this.toTopOfStack(this.teachers[i].id);
-        card.classList.add("scaled");
-        for(let a=0; a<this.teachers.length; a++){
-          if(a !== i){
-            document.getElementById(this.teachers[a].id).classList.remove("scaled");
+        if(rect.top >= 0 && rect.left >= 0 && rect.bottom <=(window.innerHeight || document.documentElement.clientHeight) && 
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)){
+          this.toTopOfStack(this.teachers[i].id);
+          card.classList.add("scaled");
+          for(let a=0; a<this.teachers.length; a++){
+            if(a !== i){
+              document.getElementById(this.teachers[a].id).classList.remove("scaled");
+            }
           }
         }
-      }
-      if(i == 0 && view.top > 130){
-        document.getElementById(this.teachers[i].id).classList.remove("scaled");
-      }
-      if(i == (this.teachers.length - 1) && rect.top < -30){
-        document.getElementById(this.teachers[i].id).classList.remove("scaled");
+        if(i == 0 && view.top > 130){
+          document.getElementById(this.teachers[i].id).classList.remove("scaled");
+        }
+        if(i == (this.teachers.length - 1) && rect.top < -30){
+          document.getElementById(this.teachers[i].id).classList.remove("scaled");
+        }
       }
     }
   }

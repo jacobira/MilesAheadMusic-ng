@@ -1,4 +1,4 @@
-<div class="formView">
+<div class="formView hidden" id="contactForm">
   <div class="form">
     <div class="formHeader">
       Contact Form
@@ -49,9 +49,15 @@
         <input type="text" value={{instrument}}>
       </div>
     </div>
-    <div class="submit">
-      <div class="submitBtn">
+    <div class="actions">
+      <div class="submitBtn" (click)="submitForm()">
         SUBMIT
+      </div>
+      <div class="formStatus hidden">
+        Submission successful
+      </div>
+      <div class="exitBtn" (click)="hideForm()">
+        X
       </div>
     </div>
   </div>

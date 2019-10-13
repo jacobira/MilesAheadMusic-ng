@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServerLinkService } from '../server-link.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private serverLink: ServerLinkService) { }
 
   ngOnInit() {
   }
@@ -20,4 +21,12 @@ export class ContactFormComponent implements OnInit {
   studentLastName: string = "Doe";
   instrument: string = "Saxophone";
 
+  hideForm(){
+    document.getElementById('contactForm').classList.add('hidden');
+  }
+
+  submitForm(){
+    this.serverLink.submitContactForm(this.parentFirstName, this.parentLastName, this.phoneNum, 
+    this.emailAddress, this.studentFirstName, this.studentLastName, this.instrument);
+  }
 }
