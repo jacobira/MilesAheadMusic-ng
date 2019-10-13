@@ -1,0 +1,26 @@
+.formView {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 50;
+}
+.formView .form {
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  padding: 20px;
+  font-size: 20px;
+}
+.formView .form input {
+  font-size: 20px;
+}
+.formView .form .formHeader {
+  width: 100%;
+  font-size: 60px;
+  font-family: "Sacramento", cursive;
+  text-align: center;
+}
+.formView .form .formExplain {
+  margin-bottom: 20px;
+  font-size: 16px;
+}

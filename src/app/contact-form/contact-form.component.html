@@ -1,3 +1,58 @@
-<p>
-  contact-form works!
-</p>
+<div class="formView">
+  <div class="form">
+    <div class="formHeader">
+      Contact Form
+    </div>
+    <div class="formExplain">
+      Please fill out the form below, and a member of our staff will personally 
+      reach out to you to answer any questions, get you a quote, or to help you 
+      get enrolled!
+    </div>
+    <div class="parentName">
+      <div>
+        First Name<br>
+        <div class="first">
+          <input type="text" value={{parentFirstName}} height="40">
+        </div>
+        Last <br>
+        <div class="last">
+          <input type="text" value={{parentLastName}}>
+        </div>
+      </div>
+    </div>
+    <div class="phone">
+      Phone Number
+      <div class="phoneNumber">
+        <input type="tel" value={{phoneNum}}>
+      </div>
+    </div>
+    <div class="email">
+      Email
+      <div class="emailAddress">
+        <input type="email" value={{emailAddress}}>
+      </div>
+    </div>
+    <div class="studentName">
+      Student Name (if different)
+      <div>
+        <div class="first">
+          <input type="text" value={{studentFirstName}}>
+        </div>
+        <div class="last">
+          <input type="text" value={{studentLastName}}>
+        </div>
+      </div>
+    </div>
+    <div class="instrument">
+      Instrument
+      <div class="instrumentEntry">
+        <input type="text" value={{instrument}}>
+      </div>
+    </div>
+    <div class="submit">
+      <div class="submitBtn">
+        SUBMIT
+      </div>
+    </div>
+  </div>
+</div>

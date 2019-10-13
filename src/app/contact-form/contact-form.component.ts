@@ -12,4 +12,12 @@ export class ContactFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  parentFirstName: string = "John";
+  parentLastName: string = "Doe";
+  phoneNum: string = "8019605144";
+  emailAddress: string = "none@email.com";
+  studentFirstName: string = "Suzie";
+  studentLastName: string = "Doe";
+  instrument: string = "Saxophone";
+
 }
