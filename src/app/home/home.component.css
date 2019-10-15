@@ -1,15 +1,17 @@
 .super {
-  height: 200px;
+  height: 400px;
   width: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
-  margin-top: 100px;
-  overflow: hidden;
+  overflow-x: hidden;
   z-index: 1;
 }
 .super #studioVid {
-  width: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -26,7 +28,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
 }
 .content .vidOverlay .sellPoint {
   color: white;
@@ -50,7 +51,7 @@
   height: 100px;
   width: 90%;
   font-family: 'Sacramento', cursive;
-  border-radius: 10px;
+  border-radius: 50px;
   background-color: #1f1d1d;
   color: white;
   font-size: 30px;
@@ -60,14 +61,13 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 320px;
+  top: 350px;
   transition: .2s;
   cursor: pointer;
 }
 @media screen and (min-width: 500px) {
   .content .vidOverlay .enrollBtn {
     width: 200px;
-    border-radius: 50px;
     top: 250px;
   }
 }
