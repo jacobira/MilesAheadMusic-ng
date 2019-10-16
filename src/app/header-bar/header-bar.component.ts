@@ -15,7 +15,7 @@ export class HeaderBarComponent implements OnInit {
     }
     function growShrinkLogo(){
       let logo = document.getElementById('logo');
-      if (document.documentElement.scrollTop || document.body.scrollTop > 75){
+      if (document.documentElement.scrollTop){
         logo.classList.remove('inflate');
       } else {
         logo.classList.add('inflate');

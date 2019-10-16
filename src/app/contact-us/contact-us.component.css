@@ -78,6 +78,7 @@
 .content .infoSection .infoDetails .email .emailAddress {
   display: block;
   width: auto;
+  font-size: 12px;
 }
 .content .infoSection .infoDetails .phone .phoneIcon {
   height: 50px;
