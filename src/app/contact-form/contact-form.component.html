@@ -12,41 +12,41 @@
       <div>
         First Name<br>
         <div class="first">
-          <input type="text" value={{parentFirstName}} height="40">
+          <input type="text" [(ngModel)]="parentFirstName" height="40">
         </div>
         Last <br>
         <div class="last">
-          <input type="text" value={{parentLastName}}>
+          <input type="text" [(ngModel)]="parentLastName">
         </div>
       </div>
     </div>
     <div class="phone">
       Phone Number
       <div class="phoneNumber">
-        <input type="tel" value={{phoneNum}}>
+        <input type="tel" [(ngModel)]="phoneNum">
       </div>
     </div>
     <div class="email">
       Email
       <div class="emailAddress">
-        <input type="email" value={{emailAddress}}>
+        <input type="email" [(ngModel)]="emailAddress">
       </div>
     </div>
     <div class="studentName">
       Student Name (if different)
       <div>
         <div class="first">
-          <input type="text" value={{studentFirstName}}>
+          <input type="text" [(ngModel)]="studentFirstName">
         </div>
         <div class="last">
-          <input type="text" value={{studentLastName}}>
+          <input type="text" [(ngModel)]="studentLastName">
         </div>
       </div>
     </div>
     <div class="instrument">
       Instrument
       <div class="instrumentEntry">
-        <input type="text" value={{instrument}}>
+        <input type="text" [(ngModel)]="instrument">
       </div>
     </div>
     <div class="actions">

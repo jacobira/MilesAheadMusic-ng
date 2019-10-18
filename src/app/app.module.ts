@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 const config: SocketIoConfig = {url: 'http://localhost:3333', options: {}};
@@ -32,6 +33,7 @@ import { SingleReviewComponent } from './single-review/single-review.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     SocketIoModule.forRoot(config)
   ],
   providers: [],
