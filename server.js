@@ -18,7 +18,7 @@ function sendEmail(time, data) {
     var form = JSON.parse(data);
     var mailOptions = {
     from: 'butler.milesaheadmusicutah@gmail.com',
-    to: 'milesaheadmusicutah@gmail.com',
+    to: 'jazzyjacobbaldwin@gmail.com',
     subject: '(TEST) New Contact Form Received!',
     html: 
         `<div>

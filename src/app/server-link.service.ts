@@ -23,6 +23,7 @@ export class ServerLinkService {
     this.ioSocket.emit("newFormSubmit", JSON.stringify(form));
     this.ioSocket.on('formConfirm', () => {
       console.log('Form successfully submitted');
+      document.getElementById('formStatus').classList.remove('hidden');
     });
   }
 }
