@@ -6,13 +6,18 @@ import { Injectable } from '@angular/core';
 export class GetTeacherListService {
 
   constructor() {
-    this.getTeachers();
+    this.getTeachersDB();
   }
 
-  getTeachers(){
+  getTeachersDB(){
     //For future query of database.
     //this.teachers = #queried content#
   }
+
+  photoDisplay: string = "";
+  nameDisplay: string = "";
+  skillsDisplay: string = "";
+  bioDisplay: string = "";
 
   teachers: any[] = [{
     "name":"Madison Moline",

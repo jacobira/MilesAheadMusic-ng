@@ -14,11 +14,24 @@ export class TeacherDisplayComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.createTeacherDisplay();
-    
   }
 
   teachers: any[] = this.getTeachers.teachers;
   indexCounter: number = this.teachers.length;
+
+  displayTeacherBio(teacherID){
+    console.log('function called for ' + teacherID);
+    for(let i=0; i<this.teachers.length; i++){
+      if(this.teachers[i].id == teacherID){
+        let photo = this.teachers[i].photo;
+        document.getElementById(`${teacherID}BioPhoto`).style.backgroundImage = `url("../../assets/site-media/${photo}")`;
+        document.getElementById(`${teacherID}Bio`).classList.remove('hidden');
+        // if(document.getElementById('bioView')){
+        //   console.log('done');
+        // }
+      }
+    }
+  }
 
   mobileScrollStackCheck(){
     if(document.getElementById('cardViewport')){

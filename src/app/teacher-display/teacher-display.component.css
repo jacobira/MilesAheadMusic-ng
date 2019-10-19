@@ -54,7 +54,23 @@
 .cardViewport .item .instructor9 {
   background-image: url('../../assets/site-media/generic.png');
 }
+.cardViewport .item .seeBioBtn {
+  height: 50px;
+  width: 50px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-image: url('../../assets/site-media/menuIcon.png');
+  background-size: cover;
+  cursor: pointer;
+}
 .cardViewport .scaled {
   transform: scale(1.15);
   transition: .2s;
+}
+.cardViewport .bioDisplay {
+  transform: none;
+  transition: none;
+}
+.hidden {
+  display: none;
 }

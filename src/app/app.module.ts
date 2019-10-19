@@ -16,6 +16,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { FooterBarComponent } from './footer-bar/footer-bar.component';
 import { SingleReviewComponent } from './single-review/single-review.component';
+import { BioDisplayComponent } from './bio-display/bio-display.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SingleReviewComponent } from './single-review/single-review.component';
     ContactFormComponent,
     HeaderBarComponent,
     FooterBarComponent,
-    SingleReviewComponent
+    SingleReviewComponent,
+    BioDisplayComponent
   ],
   imports: [
     BrowserModule,
