@@ -24,6 +24,7 @@ export class ServerLinkService {
     this.ioSocket.on('formConfirm', () => {
       console.log('Form successfully submitted');
       document.getElementById('formStatus').classList.remove('hidden');
+      document.getElementById('pleaseComplete').classList.add('hidden');
     });
   }
 }

@@ -13,20 +13,33 @@ export class ContactFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  parentFirstName: string = "John";
-  parentLastName: string = "Doe";
-  phoneNum: string = "8019605144";
-  emailAddress: string = "none@email.com";
-  studentFirstName: string = "Suzie";
-  studentLastName: string = "Doe";
-  instrument: string = "Saxophone";
+  parentFirstName: string = "";
+  parentLastName: string = "";
+  phoneNum: string = "";
+  emailAddress: string = "";
+  studentFirstName: string = "";
+  studentLastName: string = "";
+  instrument: string = "";
 
   hideForm(){
+    document.getElementById('formStatus').classList.add('hidden');
+    this.parentFirstName = "";
+    this.parentLastName = "";
+    this.phoneNum = "";
+    this.emailAddress = "";
+    this.studentFirstName = "";
+    this.studentLastName = "";
+    this.instrument = "";
     document.getElementById('contactForm').classList.add('hidden');
   }
 
   submitForm(){
-    this.serverLink.submitContactForm(this.parentFirstName, this.parentLastName, this.phoneNum, 
-    this.emailAddress, this.studentFirstName, this.studentLastName, this.instrument);
+    if(this.parentFirstName.length>0 && this.parentLastName.length>0 && this.phoneNum.length>9 &&
+    this.emailAddress.includes('@') && this.instrument.length>0){
+      this.serverLink.submitContactForm(this.parentFirstName, this.parentLastName, this.phoneNum, 
+        this.emailAddress, this.studentFirstName, this.studentLastName, this.instrument);
+    } else {
+      document.getElementById('pleaseComplete').classList.remove('hidden');
+    }
   }
 }

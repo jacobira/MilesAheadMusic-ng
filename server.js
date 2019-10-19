@@ -65,6 +65,17 @@ io.on('connection', client => {
 
         sendEmail(dateTime, formData);
         client.emit('formConfirm');
+
+        let cleanData = JSON.parse(formData);
+        dbclient.query(`INSERT INTO contact_forms (timestamp,firstname,lastname,phone,email,studentfirst,studentlast,instrument) 
+        VALUES ((SELECT NOW()), '${cleanData.firstname}', '${cleanData.lastname}', '${cleanData.phone}', 
+        '${cleanData.email}', '${cleanData.studentfirst}', '${cleanData.studentlast}', '${cleanData.instrument}');`, (err, results) => {
+            if (err) {
+                throw err;
+            } else {
+                console.log('Database submission successful');
+            }
+        });
     });
 });
 
