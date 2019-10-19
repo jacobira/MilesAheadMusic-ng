@@ -64,7 +64,6 @@ io.on('connection', client => {
         ":" + currentdate.getSeconds() + "";
 
         sendEmail(dateTime, formData);
-        client.emit('formConfirm');
 
         let cleanData = JSON.parse(formData);
         dbclient.query(`INSERT INTO contact_forms (timestamp,firstname,lastname,phone,email,studentfirst,studentlast,instrument) 
@@ -74,6 +73,7 @@ io.on('connection', client => {
                 throw err;
             } else {
                 console.log('Database submission successful');
+                client.emit('formConfirm');
             }
         });
     });
