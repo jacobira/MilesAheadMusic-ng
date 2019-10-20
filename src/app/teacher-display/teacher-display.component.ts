@@ -35,28 +35,30 @@ export class TeacherDisplayComponent implements AfterViewInit {
 
   mobileScrollStackCheck(){
     if(document.getElementById('cardViewport')){
-      let view = document.getElementById('cardViewport').getBoundingClientRect();
+      if(window.innerWidth < 1200){
+        let view = document.getElementById('cardViewport').getBoundingClientRect();
     
-      for(let i=0; i<this.teachers.length; i++){
-
-        let card = document.getElementById(this.teachers[i].id);
-        let rect = card.getBoundingClientRect();
-
-        if(rect.top >= 0 && rect.left >= 0 && rect.bottom <=(window.innerHeight || document.documentElement.clientHeight) && 
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)){
-          this.toTopOfStack(this.teachers[i].id);
-          card.classList.add("scaled");
-          for(let a=0; a<this.teachers.length; a++){
-            if(a !== i){
-              document.getElementById(this.teachers[a].id).classList.remove("scaled");
+        for(let i=0; i<this.teachers.length; i++){
+  
+          let card = document.getElementById(this.teachers[i].id);
+          let rect = card.getBoundingClientRect();
+  
+          if(rect.top >= 0 && rect.left >= 0 && rect.bottom <=(window.innerHeight || document.documentElement.clientHeight) && 
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)){
+            this.toTopOfStack(this.teachers[i].id);
+            card.classList.add("scaled");
+            for(let a=0; a<this.teachers.length; a++){
+              if(a !== i){
+                document.getElementById(this.teachers[a].id).classList.remove("scaled");
+              }
             }
           }
-        }
-        if(i == 0 && view.top > 130){
-          document.getElementById(this.teachers[i].id).classList.remove("scaled");
-        }
-        if(i == (this.teachers.length - 1) && rect.top < -30){
-          document.getElementById(this.teachers[i].id).classList.remove("scaled");
+          if(i == 0 && view.top > 130){
+            document.getElementById(this.teachers[i].id).classList.remove("scaled");
+          }
+          if(i == (this.teachers.length - 1) && rect.top < -30){
+            document.getElementById(this.teachers[i].id).classList.remove("scaled");
+          }
         }
       }
     }
@@ -85,19 +87,26 @@ export class TeacherDisplayComponent implements AfterViewInit {
   }
 
   createTeacherDisplay(){
-    if(window.innerWidth < 1300){
-      document.getElementById("cardViewport").style.height = `calc(${this.teachers.length * 50}vh - 50vh + 30px)`;
+
+    this.indexCounter = this.teachers.length;
+    window.addEventListener('scroll', () => {this.mobileScrollStackCheck()});
+
+    if(window.innerWidth < 1200){
       for(let i=0; i<this.teachers.length; i++){
         let projectId = this.teachers[i].id;
-        
-        
         let el = document.getElementById(this.teachers[i].id);
+        el.style.left = "10%";
+        el.style.right = "10%";
         el.style.top = `${40 * i}vh`;
         el.style.zIndex = `${this.indexCounter}`;
         this.indexCounter--;
       }
+      document.getElementById("cardViewport").style.height = `calc(${this.teachers.length * 50}vh - 50vh + 30px)`;
+      
     }
-    window.addEventListener('scroll', () => {this.mobileScrollStackCheck()});
+    if(window.innerWidth >= 1200){
+      
+    }
   }
 
 }

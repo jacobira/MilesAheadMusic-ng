@@ -7,6 +7,12 @@
     // margin-top: 100px;
     overflow-x: hidden;
     z-index: 1;
+    @media screen and (min-width: 500px){
+        height: 500px;
+    }
+    @media scren and (min-width: 1200px){
+        height: 600px;
+    }
 
     #studioVid {
         min-height: 100%;
@@ -30,6 +36,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (min-width: 500px){
+            height: 400px;
+        }
+        @media screen and (min-width: 1200px){
+            height: 500px;
+        }
+
 
         .sellPoint {
             color: white;
@@ -42,12 +55,19 @@
                 font-size: 40px;
                 margin-top: 160px;
                 margin-bottom: 10px;
+                @media screen and (min-width: 500px){
+                    font-size: 50px;
+                }
             }
             .subText {
                 width: 200px;
                 margin: 0 auto;
                 font-size: 15px;
                 font-family: 'Julius Sans One', sans-serif;
+                @media screen and (min-width: 500px){
+                    font-size: 20px;
+                    width: 300px;
+                }
             }
         }
 
@@ -71,8 +91,8 @@
             transition: .2s;
             cursor: pointer;
             @media screen and (min-width: 500px){
-                width: 200px;
-                top: 250px;
+                width: 300px;
+                top: 450px;
             }
         }
     }
@@ -84,6 +104,9 @@
         align-items: center;
         background-color: white;
         margin-top: 180px;
+        @media screen and (min-width: 500px){
+            margin-top: 200px;
+        }
 
         .text {
             width: 60%;
@@ -91,6 +114,9 @@
             color: rgb(56, 54, 54);
             font-family: 'Quicksand', sans-serif;
             text-align: center;
+            @media screen and (min-width: 500px){
+                font-size: 18px;
+            }
         }
     }
 
@@ -101,6 +127,9 @@
         background-color: white;
         margin-top: 50px;
         margin-bottom: 50px;
+        @media screen and (min-width: 500px){
+            font-size: 50px;
+        }
     }
 
     .reviews {
@@ -122,6 +151,10 @@
         }
         .realReviews {
             margin-top: 50px;
+            @media screen and (min-width: 1200px){
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 
@@ -131,6 +164,7 @@
         padding-bottom: 50px;
         background-color: rgb(61, 58, 58);
         margin-bottom: 100px;
+        margin-top: 50px;
 
         .storeLogo {
             height: 180px;

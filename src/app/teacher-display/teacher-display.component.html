@@ -1,4 +1,4 @@
-<div class="cardViewport" id="cardViewport">
+<div class="cardViewport" id="cardViewport" (window:resize)="createTeacherDisplay()">
   <div class="item" id="{{teacher.id}}" onmouseover="" *ngFor="let teacher of teachers">
     <div>
       <div class="instructorPhoto {{teacher.id}}">

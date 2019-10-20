@@ -7,6 +7,16 @@
   overflow-x: hidden;
   z-index: 1;
 }
+@media screen and (min-width: 500px) {
+  .super {
+    height: 500px;
+  }
+}
+@media scren and (min-width: 1200px) {
+  .super {
+    height: 600px;
+  }
+}
 .super #studioVid {
   min-height: 100%;
   min-width: 100%;
@@ -29,6 +39,16 @@
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 500px) {
+  .content .vidOverlay {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .content .vidOverlay {
+    height: 500px;
+  }
+}
 .content .vidOverlay .sellPoint {
   color: white;
   font-family: 'Sacramento', cursive;
@@ -41,11 +61,22 @@
   margin-top: 160px;
   margin-bottom: 10px;
 }
+@media screen and (min-width: 500px) {
+  .content .vidOverlay .sellPoint .mainText {
+    font-size: 50px;
+  }
+}
 .content .vidOverlay .sellPoint .subText {
   width: 200px;
   margin: 0 auto;
   font-size: 15px;
   font-family: 'Julius Sans One', sans-serif;
+}
+@media screen and (min-width: 500px) {
+  .content .vidOverlay .sellPoint .subText {
+    font-size: 20px;
+    width: 300px;
+  }
 }
 .content .vidOverlay .enrollBtn {
   height: 100px;
@@ -67,8 +98,8 @@
 }
 @media screen and (min-width: 500px) {
   .content .vidOverlay .enrollBtn {
-    width: 200px;
-    top: 250px;
+    width: 300px;
+    top: 450px;
   }
 }
 .content .missionStatement {
@@ -79,12 +110,22 @@
   background-color: white;
   margin-top: 180px;
 }
+@media screen and (min-width: 500px) {
+  .content .missionStatement {
+    margin-top: 200px;
+  }
+}
 .content .missionStatement .text {
   width: 60%;
   font-size: 15px;
   color: #383636;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
+}
+@media screen and (min-width: 500px) {
+  .content .missionStatement .text {
+    font-size: 18px;
+  }
 }
 .content .instructorsHeading {
   font-size: 40px;
@@ -93,6 +134,11 @@
   background-color: white;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+@media screen and (min-width: 500px) {
+  .content .instructorsHeading {
+    font-size: 50px;
+  }
 }
 .content .reviews {
   width: 100%;
@@ -114,12 +160,19 @@
 .content .reviews .realReviews {
   margin-top: 50px;
 }
+@media screen and (min-width: 1200px) {
+  .content .reviews .realReviews {
+    display: flex;
+    justify-content: center;
+  }
+}
 .content .recommendSec {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #3d3a3a;
   margin-bottom: 100px;
+  margin-top: 50px;
 }
 .content .recommendSec .storeLogo {
   height: 180px;

@@ -5,12 +5,20 @@
   background-color: rgba(0, 0, 0, 0.85);
   z-index: 50;
   overflow: scroll;
+  display: flex;
+  justify-content: center;
 }
 .formView .form {
   color: white;
   font-family: "Quicksand", sans-serif;
   padding: 20px;
   font-size: 20px;
+}
+@media screen and (min-width: 500px) {
+  .formView .form {
+    width: 350px;
+    margin-top: 100px;
+  }
 }
 .formView .form input {
   font-size: 20px;
