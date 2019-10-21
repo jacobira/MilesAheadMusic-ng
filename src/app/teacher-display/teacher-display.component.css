@@ -77,9 +77,11 @@
   background-size: cover;
   cursor: pointer;
 }
-.cardViewport .scaled {
-  transform: scale(1.15);
-  transition: .2s;
+@media screen and (max-width: 1200px) {
+  .cardViewport .scaled {
+    transform: scale(1.15);
+    transition: .2s;
+  }
 }
 .cardViewport .bioDisplay {
   transform: none;

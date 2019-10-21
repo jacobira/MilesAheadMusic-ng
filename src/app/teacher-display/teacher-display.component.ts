@@ -87,7 +87,7 @@ export class TeacherDisplayComponent implements AfterViewInit {
   createTeacherDisplay(){
     if(window.innerWidth < 1200){
       this.indexCounter = this.teachers.length;
-    window.addEventListener('scroll', () => {this.mobileScrollStackCheck()});
+      window.addEventListener('scroll', () => {this.mobileScrollStackCheck()});
 
     for(let i=0; i<this.teachers.length; i++){
       let projectId = this.teachers[i].id;
@@ -97,6 +97,13 @@ export class TeacherDisplayComponent implements AfterViewInit {
       this.indexCounter--;
     }
     document.getElementById("cardViewport").style.height = `calc(${this.teachers.length * 50}vh - 50vh + 30px)`;
+    } else {
+      for(let i=0; i<this.teachers.length; i++){
+        let el = document.getElementById(this.teachers[i].id);
+        el.style.top = "0";
+        el.classList.remove('scaled');
+      }
+      document.getElementById("cardViewport").style.height = "auto";
     }
   }
 }
