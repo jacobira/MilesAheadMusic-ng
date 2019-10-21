@@ -1,14 +1,20 @@
 .cardViewport {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     position: relative;
+    @media screen and (min-width: 1200px){
+        .item:hover {
+            transform: scale(1.15);
+            transition: .2s;
+        }
+    }
 
     .item {
         height: 80vh;
         width: 80%;
-        left: 10%;
         position: absolute;
         display: flex;
         justify-content: center;
@@ -23,9 +29,11 @@
             
         }
         @media screen and (min-width: 1200px){
+            position: static;
             height: 500px;
-            width: 400px;
-            background-image: linear-gradient(to right, rgb(56, 53, 53), rgb(31, 29, 29));
+            width: 300px;
+            margin: 20px;
+            
         }
 
         .instructorPhoto {
