@@ -161,13 +161,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+
 
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent(router) {
+    function AppComponent(router, titleService) {
         this.router = router;
-        this.title = 'MilesAheadNg';
+        this.titleService = titleService;
+        this.title = 'Miles Ahead Music';
+        this.titleService.setTitle(this.title);
     }
     AppComponent.prototype.ngOnInit = function () {
         this.router.events.subscribe(function (evt) {
@@ -183,7 +187,7 @@ var AppComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.less */ "./src/app/app.component.less")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Title"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -224,7 +228,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var config = { url: 'http://localhost:3333', options: {} };
+var config = { url: 'http://3.16.108.177', options: {} };
 
 
 
