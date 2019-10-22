@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,13 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent implements OnInit{
-  title = 'MilesAheadNg';
+  title = 'Miles Ahead Music';
 
-  constructor(private router: Router){}
+  constructor(private router: Router, private titleService: Title){
+    this.titleService.setTitle(this.title);
+  }
+
+
 
   ngOnInit(){
     this.router.events.subscribe((evt) => {

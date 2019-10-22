@@ -18,11 +18,11 @@ function sendEmail(time, data) {
     var form = JSON.parse(data);
     var mailOptions = {
     from: 'butler.milesaheadmusicutah@gmail.com',
-    to: 'jazzyjacobbaldwin@gmail.com',
-    subject: '(TEST) New Contact Form Received!',
+    to: 'milesaheadmusicutah@gmail.com',
+    subject: 'New Contact Form Received!',
     html: 
         `<div>
-            THIS IS A TEST OF THE MILES AHEAD MUSIC BUTLER SYSTEM<br><br>
+            Delivery from the Miles Ahead Music Butler System<br><br>
             CONTACT FORM:<br>
             Submitted at: ${time}<br><br>
 
@@ -84,7 +84,6 @@ io.on('connection', client => {
                 throw err;
             } else {
                 console.log('Teacher list retrieved');
-                console.log(results);
                 client.emit('teacherListSend', JSON.stringify(results));
             }
         });
