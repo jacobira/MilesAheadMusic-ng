@@ -6,7 +6,7 @@ import { Socket } from 'ngx-socket-io';
 })
 export class ServerLinkService {
 
-  constructor(private ioSocket: Socket) { 
+  constructor(public ioSocket: Socket) { 
     
   }
 

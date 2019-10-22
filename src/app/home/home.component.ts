@@ -40,14 +40,10 @@ export class HomeComponent implements OnInit {
           "reviewId": "review3"
       }
     ];
-
-    this.instructors = [
-
-    ]
   }
 
   ngOnInit() {
-    //  window.addEventListener('scroll', () => {this.mobileScrollStackCheck()});
+    
   }
 
   reviews: any[] = [];
@@ -56,45 +52,4 @@ export class HomeComponent implements OnInit {
   displayForm(){
     document.getElementById('contactForm').classList.remove('hidden');
   }
-
-  // mobileScrollStackCheck(){
-  //   for(let i=0; i<this.instructors.length; i++){
-
-  //     let card = document.getElementById(this.instructors[i].reviewId);
-
-  //     let rect = card.getBoundingClientRect();
-  //     if(rect.top >= 0 && rect.left >= 0 && rect.bottom <=(window.innerHeight || document.documentElement.clientHeight) && 
-  //     rect.right <= (window.innerWidth || document.documentElement.clientWidth)){
-  //       console.log("to top of stack");
-  //       this.toTopOfStack(this.instructors[i].reviewId);
-  //       card.classList.add("scaled");
-  //       for(let a=0; a<this.instructors.length; a++){
-  //         if(a !== i){
-  //             document.getElementById(this.instructors[a].reviewId).classList.remove("scaled");
-  //         }
-  //       }
-  //     } 
-  //   }
-  // }
-  // toTopOfStack(boxId){
-  //   let el = document.getElementById(boxId);
-  //   el.style.zIndex = `${this.instructors.length}`;
-  //   for (let i = 0; i < this.instructors.length; i++){
-  //     if (this.instructors[i].reviewId === boxId){
-  //       let lowIndexCounter = 1;
-  //       let highIndexCounter = this.instructors.length - 1;
-  //       for (let a = 0; a < this.instructors.length; a++){
-  //         if (a < i){
-  //           document.getElementById(this.instructors[a].reviewId).style.zIndex = `${lowIndexCounter}`;
-  //           lowIndexCounter++;
-  //         }
-  //         if (a > i){
-  //           document.getElementById(this.instructors[a].reviewId).style.zIndex = `${highIndexCounter}`;
-  //           highIndexCounter--;
-  //         }
-  //       }
-  //       break;
-  //     }
-  //   }
-  // }
 }

@@ -77,6 +77,18 @@ io.on('connection', client => {
             }
         });
     });
+
+    client.on('getTeachers', () => {
+        dbclient.query('SELECT * FROM teachers', (err, results) => {
+            if (err){
+                throw err;
+            } else {
+                console.log('Teacher list retrieved');
+                console.log(results);
+                client.emit('teacherListSend', JSON.stringify(results));
+            }
+        });
+    });
 });
 
 io.listen(3333);

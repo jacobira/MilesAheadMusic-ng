@@ -9,7 +9,7 @@ import { GetTeacherListService } from '../get-teacher-list.service';
 export class TeacherDisplayComponent implements AfterViewInit {
 
   constructor(private getTeachers: GetTeacherListService) { 
-    
+    this.getTeachers.getTeachersDB();
   }
 
   ngAfterViewInit() {
