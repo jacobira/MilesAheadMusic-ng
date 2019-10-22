@@ -26,7 +26,6 @@ export class GetTeacherListService {
             );
         }
     });
-    console.log(this.teachers)
   }
 
   photoDisplay: string = "";
