@@ -7,12 +7,13 @@ import { ServerLinkService } from './server-link.service';
 export class GetTeacherListService {
 
   constructor(private serverLink: ServerLinkService) {
-    
+    this.getTeachersDB();
   }
 
   getTeachersDB(){
     this.serverLink.ioSocket.emit('getTeachers');
     this.serverLink.ioSocket.on('teacherListSend', (data) => {
+        console.log('teachers cleared');
         let teacherData = JSON.parse(data);
         for (let i=0; i<teacherData.rows.length; i++){
             this.teachers.push(

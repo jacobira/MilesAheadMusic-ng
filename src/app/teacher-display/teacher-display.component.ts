@@ -9,12 +9,14 @@ import { GetTeacherListService } from '../get-teacher-list.service';
 export class TeacherDisplayComponent implements AfterViewInit {
 
   constructor(private getTeachers: GetTeacherListService) { 
-    this.getTeachers.getTeachersDB();
+    
   }
 
   ngAfterViewInit() {
-    this.createTeacherDisplay();
+    setTimeout(this.createTeacherDisplay, 1000);
   }
+
+
 
   teachers: any[] = this.getTeachers.teachers;
   indexCounter: number = this.teachers.length;
@@ -85,26 +87,26 @@ export class TeacherDisplayComponent implements AfterViewInit {
   }
 
   createTeacherDisplay(){
-    if(window.innerWidth < 1200){
-      this.indexCounter = this.teachers.length;
-      window.addEventListener('scroll', () => {this.mobileScrollStackCheck()});
+    // if(window.innerWidth < 1200){
+    //   this.indexCounter = this.teachers.length;
+      // window.addEventListener('scroll', () => {this.mobileScrollStackCheck()});
 
-    for(let i=0; i<this.teachers.length; i++){
-      let projectId = this.teachers[i].id;
-      let el = document.getElementById(this.teachers[i].id);
-      el.style.top = `${40 * i}vh`;
-      el.style.zIndex = `${this.indexCounter}`;
-      this.indexCounter--;
-    }
-    document.getElementById("cardViewport").style.height = `calc(${this.teachers.length * 50}vh - 50vh + 30px)`;
-    } else {
-      for(let i=0; i<this.teachers.length; i++){
-        let el = document.getElementById(this.teachers[i].id);
-        el.style.top = "0";
-        el.classList.remove('scaled');
-      }
-      document.getElementById("cardViewport").style.height = "auto";
-    }
+    // for(let i=0; i<this.teachers.length; i++){
+    //   let projectId = this.teachers[i].id;
+    //   let el = document.getElementById(this.teachers[i].id);
+    //   el.style.top = `${40 * i}vh`;
+    //   el.style.zIndex = `${this.indexCounter}`;
+    //   this.indexCounter--;
+    // }
+    // document.getElementById("cardViewport").style.height = `calc(${this.teachers.length * 50}vh - 50vh + 30px)`;
+    // } else {
+      // for(let i=0; i<this.teachers.length; i++){
+      //   let el = document.getElementById(this.teachers[i].id);
+      //   el.style.top = "0";
+      //   // el.classList.remove('scaled');
+      // }
+      // document.getElementById("cardViewport").style.height = "auto";
+    // }
   }
 }
 
