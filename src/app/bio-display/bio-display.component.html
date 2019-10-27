@@ -10,8 +10,10 @@
   </div>
   <div class="bio">
     {{teacher.bio}}
+
+    <div class="exitBtn" (click)="hideTeacherBio(teacher.id)">
+      X
+    </div>
   </div>
-  <div class="exitBtn" (click)="hideTeacherBio(teacher.id)">
-    X
-  </div>
+  
 </div>
