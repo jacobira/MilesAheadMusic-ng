@@ -37,7 +37,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
 }
 @media screen and (min-width: 500px) {
   .content .infoSection .mapSection .mapDisplay {
@@ -47,7 +47,7 @@
 }
 .content .infoSection .mapSection .mapDisplay:hover {
   transform: scale(1.05);
-  transition: .2s;
+  transition: 0.2s;
 }
 .content .infoSection .mapSection .mapDisplay div {
   color: white;
@@ -79,6 +79,21 @@
   .content .infoSection .infoDetails div {
     justify-content: center;
   }
+}
+.content .infoSection .infoDetails .socialMedia {
+  margin-bottom: 20px;
+}
+.content .infoSection .infoDetails .socialMedia div {
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  cursor: pointer;
+}
+.content .infoSection .infoDetails .socialMedia .fb {
+  background-image: url(../../assets/site-media/fbLogo.png);
+}
+.content .infoSection .infoDetails .socialMedia .insta {
+  background-image: url(../../assets/site-media/instaLogo.png);
 }
 .content .infoSection .infoDetails .address .addressIcon {
   height: 50px;
@@ -133,12 +148,12 @@
   align-items: center;
   background-color: #1f1d1d;
   box-shadow: 0 0 5px black, 0 0 10px black;
-  transition: .2s;
+  transition: 0.2s;
   cursor: pointer;
 }
 .content .infoSection .formBtnSec .formBtn:hover {
   transform: scale(1.05);
-  transition: .2s;
+  transition: 0.2s;
 }
 .content .infoSection .dropInTitle {
   height: 50px;
