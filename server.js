@@ -1,12 +1,7 @@
-var app = require('https').createServer(options, handler);
+var app = require('https').createServer(handler);
 
 const fs = require('fs');  
 
-var options = {
-    key: fs.readFileSync('ssl/private/milesaheadmusiclessons.com.key'),
-    cert: fs.readFileSync('ssl/certs/milesaheadmusiclessons.com.crt'),
-    ca: fs.readFileSync('ssl/certs/milesaheadmusiclessons.com.cabundle')
-};
 function handler(req, res) {
     res.writeHead(200);
     res.end("welcome sir!");
