@@ -68,6 +68,7 @@ io.on('connection', client => {
     // });
 
     client.on('newFormSubmit', (formData) => {
+        console.log('new form submit request received');
         var currentdate = new Date();
         var dateTime = "" + (currentdate.getMonth()+1) + "/" + currentdate.getDate() + "/" +
         currentdate.getFullYear() + " @ " + currentdate.getHours() + ":" + currentdate.getMinutes() + 
