@@ -1,4 +1,5 @@
-const io = require('socket.io')();
+var app = require('https').createServer(options, handler);
+const io = require('socket.io').listen(app);
 const fs = require('fs');    
 const nodemailer = require('nodemailer');
 const pg = require('pg');
