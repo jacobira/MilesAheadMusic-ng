@@ -5,6 +5,10 @@ var options = {
     cert: fs.readFileSync('ssl/certs/milesaheadmusiclessons.com.crt'),
     ca: fs.readFileSync('ssl/certs/milesaheadmusiclessons.com.cabundle')
 };
+function handler(req, res) {
+    res.writeHead(200);
+    res.end("welcome sir!");
+};   
 
 const io = require('socket.io').listen(app);
 const fs = require('fs');    
