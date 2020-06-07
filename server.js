@@ -94,9 +94,8 @@ io.on('connection', client => {
                 console.log('Database submission successful');
                 // client.emit('formConfirm');
             }
-
-            client.emit('formConfirm'); // temporary placement until database connectivity resolved.
         });
+        client.emit('formConfirm'); // temporary placement until database connectivity resolved.
     });
 
     client.on('getTeachers', () => {
