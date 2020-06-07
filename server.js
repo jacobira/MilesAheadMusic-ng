@@ -3,6 +3,19 @@ const nodemailer = require('nodemailer');
 const pg = require('pg');
 const conString = "postgres://postgres:Jjrhmjbb97$$@milesaheadmusicdb.ctcjl8pyfn9w.us-east-2.rds.amazonaws.com:5432/postgres";
 
+io.enable('browser client minification');  // send minified client
+io.enable('browser client etag');          // apply etag caching logic based on version number
+io.enable('browser client gzip');          // gzip the file
+io.set('log level', 1);                    // reduce logging
+io.set('flash policy port', 3300); //==>  override Flash Policy Port  
+io.set('transports', [                     // enable all transports (optional if you want flashsocket)
+    'websocket'
+  , 'flashsocket'
+  , 'htmlfile'
+  , 'xhr-polling'
+  , 'jsonp-polling'
+]);
+
 var dbclient = new pg.Client(conString);
 dbclient.connect();
 
