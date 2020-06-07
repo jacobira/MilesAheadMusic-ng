@@ -1,4 +1,5 @@
 const io = require('socket.io')();
+const fs = require('fs');    
 const nodemailer = require('nodemailer');
 const pg = require('pg');
 const conString = "postgres://postgres:Jjrhmjbb97$$@milesaheadmusicdb.ctcjl8pyfn9w.us-east-2.rds.amazonaws.com:5432/postgres";
