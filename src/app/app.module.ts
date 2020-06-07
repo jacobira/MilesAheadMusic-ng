@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
-const config: SocketIoConfig = {url: 'https://milesaheadmusiclessons.com', options: {
+const config: SocketIoConfig = {url: 'milesaheadmusiclessons.com', options: {
 }};
 
 import { AppRoutingModule } from './app-routing.module';
