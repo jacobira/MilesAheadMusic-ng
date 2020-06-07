@@ -1,5 +1,7 @@
 var app = require('https').createServer(options, handler);
 
+const fs = require('fs');  
+
 var options = {
     key: fs.readFileSync('ssl/private/milesaheadmusiclessons.com.key'),
     cert: fs.readFileSync('ssl/certs/milesaheadmusiclessons.com.crt'),
