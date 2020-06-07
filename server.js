@@ -92,8 +92,10 @@ io.on('connection', client => {
                 
             } else {
                 console.log('Database submission successful');
-                client.emit('formConfirm');
+                // client.emit('formConfirm');
             }
+
+            client.emit('formConfirm'); // temporary placement until database connectivity resolved.
         });
     });
 
