@@ -81,8 +81,9 @@ io.on('connection', client => {
         VALUES ((SELECT NOW()), '${cleanData.firstname}', '${cleanData.lastname}', '${cleanData.phone}', 
         '${cleanData.email}', '${cleanData.studentfirst}', '${cleanData.studentlast}', '${cleanData.instrument}');`, (err, results) => {
             if (err) {
-                throw err;
                 console.log("Could not connect to the database");
+                throw err;
+                
             } else {
                 console.log('Database submission successful');
                 client.emit('formConfirm');
@@ -93,8 +94,9 @@ io.on('connection', client => {
     client.on('getTeachers', () => {
         dbclient.query('SELECT * FROM teachers', (err, results) => {
             if (err){
-                throw err;
                 console.log("Could not connect to database");
+                throw err;
+                
             } else {
                 console.log('Teacher list retrieved');
                 client.emit('teacherListSend', JSON.stringify(results));
