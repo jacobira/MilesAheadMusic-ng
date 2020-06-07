@@ -92,6 +92,7 @@ io.on('connection', client => {
     });
 
     client.on('getTeachers', () => {
+        console.log("query to get teachers list started");
         dbclient.query('SELECT * FROM teachers', (err, results) => {
             if (err){
                 console.log("Could not connect to database");
