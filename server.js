@@ -1,17 +1,17 @@
 var app = require('https').createServer(options, handler);
+
+var options = {
+    key: fs.readFileSync('ssl/private/milesaheadmusiclessons.com.key'),
+    cert: fs.readFileSync('ssl/certs/milesaheadmusiclessons.com.crt'),
+    ca: fs.readFileSync('ssl/certs/milesaheadmusiclessons.com.cabundle')
+};
+
 const io = require('socket.io').listen(app);
 const fs = require('fs');    
 const nodemailer = require('nodemailer');
 const pg = require('pg');
 const conString = "postgres://postgres:Jjrhmjbb97$$@milesaheadmusicdb.ctcjl8pyfn9w.us-east-2.rds.amazonaws.com:5432/postgres";
 
-io.set('transports', [                     // enable all transports (optional if you want flashsocket)
-    'websocket'
-  , 'flashsocket'
-  , 'htmlfile'
-  , 'xhr-polling'
-  , 'jsonp-polling'
-]);
 
 var dbclient = new pg.Client(conString);
 dbclient.connect();
