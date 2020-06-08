@@ -12,4 +12,8 @@ export class CovidInfoComponent implements OnInit {
   ngOnInit() {
   }
 
+  displayForm(){
+    document.getElementById('contactForm').classList.remove('hidden');
+  }
+
 }
