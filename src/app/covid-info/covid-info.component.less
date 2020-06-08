@@ -1,0 +1,67 @@
+.container {
+    width: 100%;
+    position: absolute;
+    margin-top: 100px;
+    z-index: 1;
+
+    .content {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 50px;
+
+        .pageHead {
+            width: 100%;
+            text-align: center;
+            font-family: 'Julius Sans One', sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .pageText {
+            width: 100%;
+            margin-top: 25px;
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 20px;
+        }
+        .enrollBtn {
+            height: 75px;
+            width: 100%;
+            // width: 200px;
+            font-family: 'Sacramento', cursive;
+            border-radius: 50px;
+            // border-radius: 50px;
+            background-color: rgb(31, 29, 29);
+            color: white;
+            font-size: 30px;
+            text-shadow: 0 0 2px black;
+            box-shadow: 0 0 15px black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .2s;
+            margin: 0 auto;
+            cursor: pointer;
+            @media screen and (min-width: 500px){
+                width: 200px;
+            }
+        }
+        .lessonHead {
+            width: 100%;
+            margin-top: 40px;
+            text-align: center;
+            font-family: 'Sacramento', cursive;
+            font-size: 30px;
+        }
+        .lessonText {
+            width: 100%;
+            margin-top: 10px;
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 20px;
+            
+            ul li {
+                text-align: left;
+            }
+        }
+    }
+}
