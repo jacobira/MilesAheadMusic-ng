@@ -66,6 +66,28 @@
             margin-left: 300px;
         }
 
+        .newsBanner {
+            height: 50px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 0 0 10px black;
+            position: absolute;
+            left: ~"calc(50% - 150px)";
+            top: 90px;
+            box-shadow: 0 0 15px black;
+            background-color: lightgray;
+            border-radius: 25px;
+            cursor: pointer;
+
+            @media screen and (max-width: 600px){
+                top: 75px;
+                left: ~"calc(50% - 75px)";
+                width: 150px;
+            }
+        }
+
         .navBtn {
             text-align: center;
             outline: none;

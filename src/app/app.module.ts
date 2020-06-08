@@ -18,6 +18,7 @@ import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { FooterBarComponent } from './footer-bar/footer-bar.component';
 import { SingleReviewComponent } from './single-review/single-review.component';
 import { BioDisplayComponent } from './bio-display/bio-display.component';
+import { CovidInfoComponent } from './covid-info/covid-info.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { BioDisplayComponent } from './bio-display/bio-display.component';
     HeaderBarComponent,
     FooterBarComponent,
     SingleReviewComponent,
-    BioDisplayComponent
+    BioDisplayComponent,
+    CovidInfoComponent
   ],
   imports: [
     BrowserModule,
