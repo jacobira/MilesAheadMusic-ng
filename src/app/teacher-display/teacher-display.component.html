@@ -8,12 +8,32 @@
           {{teacher.name}}
       </div>
       <div class="instructorDesc">
-          {{teacher.basicDes}}
+          {{teacher.whatDo}}
       </div>
       <div class="seeBioBtn" (click)="displayTeacherBio(teacher.id)">
           
       </div>
-      
+    </div>
+
+    <!-- teacher bio display  -->
+    <div class="bioView hidden" id="{{teacher.id}}Bio" *ngFor="let teacher of teachers">
+      <div class="bioContainer">
+        <div class="photo" id="{{teacher.id}}BioPhoto">
+    
+        </div>
+        <div class="name">
+          {{teacher.name}}
+        </div>
+        <div class="skills">
+          {{teacher.whatDo}}
+        </div>
+        <div class="bio">
+          {{teacher.bio}}
+          <div class="exitBtn" (click)="hideTeacherBio(teacher.id)">
+            X
+          </div>
+        </div>
+      <div>
     </div>
   </div>
 </div>

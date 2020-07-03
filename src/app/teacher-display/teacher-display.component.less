@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    
     @media screen and (min-width: 1200px){
         .item:hover {
             transform: scale(1.15);
@@ -44,32 +45,38 @@
             margin: 0 auto;
             margin-bottom: 20px;
         }
-        .instructor1{
-            background-image: url('../../assets/site-media/madisonMoline.png');
+        .jadenbueno{
+            background-image: url('../../assets/site-media/jadenbueno.png');
         }
-        .instructor2 {
-            background-image: url('../../assets/site-media/jasonFullmer.png');
+        .laurenmalouf {
+            background-image: url('../../assets/site-media/laurenmalouf.png');
         }
-        .instructor3 {
-            background-image: url('../../assets/site-media/austieRobinson.png');
+        .jasonfullmer {
+            background-image: url('../../assets/site-media/jasonfullmer.png');
         }
-        .instructor4 {
-            background-image: url('../../assets/site-media/nelsenCampbell.png');
+        .davidallen {
+            background-image: url('../../assets/site-media/davidallen.png');
         }
-        .instructor5 {
-            background-image: url('../../assets/site-media/mylesLawrence.png');
+        .madisonmoline {
+            background-image: url('../../assets/site-media/madisonmoline.png');
         }
-        .instructor6 {
-            background-image: url('../../assets/site-media/jenniferWilliamson.png');
+        .jenniferwilliamson {
+            background-image: url('../../assets/site-media/jenniferwilliamson.png');
         }
-        .instructor7 {
-            background-image: url('../../assets/site-media/generic.png');
+        .kellyoja {
+            background-image: url('../../assets/site-media/kellyoja.png');
         }
-        .instructor8 {
-            background-image: url('../../assets/site-media/mitchRomney.png');
+        .nataliebrowning {
+            background-image: url('../../assets/site-media/nataliebrowning.png');
         }
-        .instructor9 {
-            background-image: url('../../assets/site-media/generic.png');
+        .mitchellromney {
+            background-image: url('../../assets/site-media/mitchellromney.png');
+        }
+        .myleslawrence {
+            background-image: url('../../assets/site-media/myleslawrence.png');
+        }
+        .caleegardner {
+            background-image: url('../../assets/site-media/caleegardner.png');
         }
         .seeBioBtn {
             height: 50px;
@@ -80,6 +87,92 @@
             background-size: cover;
             cursor: pointer;
         }
+
+        .bioView {
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            align-items: center;
+            background-color: rgba(0,0,0,.8);
+            overflow: scroll;
+
+            .bioContainer {
+                @media screen and (max-width: 1000px){
+                    width: 80%;
+                }
+                width: 60%;
+                margin: 0 auto;
+                margin-top: 170px;
+                margin-bottom: 50px;
+
+                .photo {
+                    height: 200px;
+                    width: 200px;
+                    background-size: cover;
+                    margin: 0 auto;
+                    margin-bottom: 30px;
+                }
+                // individual teacher photos for bio display
+                #jadenbuenoBioPhoto{
+                    background-image: url('../../assets/site-media/jadenbueno.png');
+                }
+                #laurenmaloufBioPhoto {
+                    background-image: url('../../assets/site-media/laurenmalouf.png');
+                }
+                #jasonfullmerBioPhoto {
+                    background-image: url('../../assets/site-media/jasonfullmer.png');
+                }
+                #davidallenBioPhoto {
+                    background-image: url('../../assets/site-media/davidallen.png');
+                }
+                #madisonmolineBioPhoto {
+                    background-image: url('../../assets/site-media/madisonmoline.png');
+                }
+                #jenniferwilliamsonBioPhoto {
+                    background-image: url('../../assets/site-media/jenniferwilliamson.png');
+                }
+                #kellyojaBioPhoto {
+                    background-image: url('../../assets/site-media/kellyoja.png');
+                }
+                #nataliebrowningBioPhoto {
+                    background-image: url('../../assets/site-media/nataliebrowning.png');
+                }
+                #mitchellromneyBioPhoto {
+                    background-image: url('../../assets/site-media/mitchellromney.png');
+                }
+                #myleslawrenceBioPhoto {
+                    background-image: url('../../assets/site-media/myleslawrence.png');
+                }
+                #caleegardnerBioPhoto {
+                    background-image: url('../../assets/site-media/caleegardner.png');
+                }
+
+                .name {
+                    font-size: 40px;
+                    margin-bottom: 5px;
+                }
+                .skills {
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+                .bio {
+                    
+                    
+                }
+                .exitBtn {
+                    height: 30px;
+                    width: 30px;
+                    margin-top: 30px;
+                    margin-bottom: 50px;
+                    font-size: 30px;
+                }
+            }
+        }
+        .hidden {
+            display: none;
+        }
         
     }
     
@@ -89,11 +182,6 @@
             transition: .2s;
         }
     }
-    .bioDisplay {
-        transform: none;
-        transition: none;
-    }
-
 }
 
 .hidden {
