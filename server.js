@@ -30,39 +30,12 @@ var transporter = nodemailer.createTransport({
     }
 });
 
-function sendEmail(time, data) {
-    var form = JSON.parse(data);
-    var mailOptions = {
-    from: 'butler.milesaheadmusicutah@gmail.com',
-    to: 'milesaheadmusicutah@gmail.com',
-    subject: 'New Contact Form Received!',
-    html: 
-        `<div>
-            Delivery from the Miles Ahead Music Butler System<br><br>
-            CONTACT FORM:<br>
-            Submitted at: ${time}<br><br>
 
-            Name: ${form.firstname + ' ' + form.lastname}<br>
-            Phone Number: ${form.phone}<br>
-            Email: ${form.email}<br>
-            Student: ${form.studentfirst + ' ' + form.studentlast}<br>
-            Instrument: ${form.instrument}
-        </div>`
-    };
-    transporter.sendMail(mailOptions, function(err, info){
-        if (err){
-            console.log(err);
-        } else {
-            console.log('Email sent: ' + info.response);
-        }
-    });
-}
 
 
 
 
 io.on('connection', client => {
-    phone = '8888888888';
     console.log('Server connection successful: ' + client.id);
     // dbclient.query(`SELECT firstname, lastname FROM contact_forms WHERE phone = '${phone}';`, (err, results) => {
     //     if (err){
@@ -82,21 +55,54 @@ io.on('connection', client => {
 
         sendEmail(dateTime, formData);
 
-        let cleanData = JSON.parse(formData);
-        dbclient.query(`INSERT INTO contact_forms (timestamp,firstname,lastname,phone,email,studentfirst,studentlast,instrument) 
-        VALUES ((SELECT NOW()), '${cleanData.firstname}', '${cleanData.lastname}', '${cleanData.phone}', 
-        '${cleanData.email}', '${cleanData.studentfirst}', '${cleanData.studentlast}', '${cleanData.instrument}');`, (err, results) => {
-            if (err) {
-                console.log("Could not connect to the database");
-                throw err;
+
+// **Old code for database submission of email data:
+
+        // let cleanData = JSON.parse(formData);
+        // dbclient.query(`INSERT INTO contact_forms (timestamp,firstname,lastname,phone,email,studentfirst,studentlast,instrument) 
+        // VALUES ((SELECT NOW()), '${cleanData.firstname}', '${cleanData.lastname}', '${cleanData.phone}', 
+        // '${cleanData.email}', '${cleanData.studentfirst}', '${cleanData.studentlast}', '${cleanData.instrument}');`, (err, results) => {
+        //     if (err) {
+        //         console.log("Could not connect to the database");
+        //         throw err;
                 
+        //     } else {
+        //         console.log('Database submission successful');
+        //         // client.emit('formConfirm');
+        //     }
+        // });
+    });
+
+    function sendEmail(time, data) {
+        var form = JSON.parse(data);
+        var mailOptions = {
+        from: 'butler.milesaheadmusicutah@gmail.com',
+        to: 'milesaheadmusicutah@gmail.com',
+        subject: 'New Contact Form Received!',
+        html: 
+            `<div>
+                Delivery from the Miles Ahead Music Butler System<br><br>
+                CONTACT FORM:<br>
+                Submitted at: ${time}<br><br>
+    
+                Name: ${form.firstname + ' ' + form.lastname}<br>
+                Phone Number: ${form.phone}<br>
+                Email: ${form.email}<br>
+                Student: ${form.studentfirst + ' ' + form.studentlast}<br>
+                Instrument: ${form.instrument}
+            </div>`
+        };
+        transporter.sendMail(mailOptions, function(err, info){
+            if (err){
+                console.log(err);
+                client.emit('emailError');
+                break;
             } else {
-                console.log('Database submission successful');
-                // client.emit('formConfirm');
+                console.log('Email sent: ' + info.response);
+                client.emit('formConfirm');
             }
         });
-        client.emit('formConfirm'); // temporary placement until database connectivity resolved.
-    });
+    }
 
     client.on('getTeachers', () => {
         console.log("query to get teachers list started");
