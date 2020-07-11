@@ -15,8 +15,5 @@ export class FooterBarComponent implements OnInit {
   displaySiteNotices(){
     document.getElementById('siteNoticesContent').classList.remove('hidden');
   }
-  exitSiteNotices(){
-    document.getElementById('siteNoticesContent').classList.add('hidden');
-  }
 
 }
