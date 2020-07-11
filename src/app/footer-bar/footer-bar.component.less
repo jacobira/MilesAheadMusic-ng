@@ -1,13 +1,47 @@
 .footer {
-    height: 60px;
+    height: 150px;
     width: 100%;
-    font-size: 12px;
+    font-size: 14px;
     color: white;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: rgb(31, 29, 29);
     z-index: 2;
     position: absolute;
+    font-family: 'Quicksand', sans-serif;
+
+    .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+        div {
+            height: 30px;
+            width: 30px;
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        .facebook {
+            background-image: url('../../assets/site-media/fbLogo.png');
+            margin-right: 5px;
+        }
+        .instagram {
+            height: 30px;
+            width: 30px;
+            background-image: url('../../assets/site-media/instaLogo.png');
+            margin-left: 5px;
+        }
+    }
+
+    .siteUsage {
+        margin-top: 20px;
+
+        #gAnalytics {
+            display: inline;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
 }

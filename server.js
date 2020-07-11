@@ -104,19 +104,22 @@ io.on('connection', client => {
         });
     }
 
-    client.on('getTeachers', () => {
-        console.log("query to get teachers list started");
-        dbclient.query('SELECT * FROM teachers', (err, results) => {
-            if (err){
-                console.log("Could not connect to database");
-                throw err;
+// Old code for query of teachers list from database. Determined it was much easier
+// to just edit teachers directly in site code than through database at this time.
+
+    // client.on('getTeachers', () => {
+    //     console.log("query to get teachers list started");
+    //     dbclient.query('SELECT * FROM teachers', (err, results) => {
+    //         if (err){
+    //             console.log("Could not connect to database");
+    //             throw err;
                 
-            } else {
-                console.log('Teacher list retrieved');
-                client.emit('teacherListSend', JSON.stringify(results));
-            }
-        });
-    });
+    //         } else {
+    //             console.log('Teacher list retrieved');
+    //             client.emit('teacherListSend', JSON.stringify(results));
+    //         }
+    //     });
+    // });
 });
 
 io.listen(3333);

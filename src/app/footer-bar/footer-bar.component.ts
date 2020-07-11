@@ -12,4 +12,11 @@ export class FooterBarComponent implements OnInit {
   ngOnInit() {
   }
 
+  displaySiteNotices(){
+    document.getElementById('siteNoticesContent').classList.remove('hidden');
+  }
+  exitSiteNotices(){
+    document.getElementById('siteNoticesContent').classList.add('hidden');
+  }
+
 }
