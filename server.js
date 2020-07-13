@@ -96,7 +96,6 @@ io.on('connection', client => {
             if (err){
                 console.log(err);
                 client.emit('emailError');
-                break;
             } else {
                 console.log('Email sent: ' + info.response);
                 client.emit('formConfirm');
