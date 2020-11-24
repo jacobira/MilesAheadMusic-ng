@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { 
+    this.displayPop();
+
     this.reviews = [
       {
           "reviewerName":"Amy Stoddard",
@@ -51,5 +53,16 @@ export class HomeComponent implements OnInit {
 
   displayForm(){
     document.getElementById('contactForm').classList.remove('hidden');
+  }
+
+  displayPop(){
+    setTimeout(function(){
+      document.getElementById('pop1').classList.remove('hidden');
+    }, 2000);
+  
+  }
+
+  hidePop(){
+    document.getElementById('pop1').classList.add('hidden');
   }
 }

@@ -65,16 +65,19 @@
 
 
 
-<!-- <div class="infoPop hidden" id="pop1">
-  <div class="information">
-      Fall 2019 Enrollment Sale!<br><br>
-      Register Now and Save 15% on Lessons!
-      <div class="popBtn">
-           Click here to get started!
+<div class="infoPop hidden" id="pop1">
+  <div class="popContainer">
+      <div class="adVideo">
+        <video autoplay loop autobuffer muted playsinline id="blackFriday2020" [muted]="true">
+            <source src="../../assets/site-media/Black-3.MP4">
+        </video>
       </div>
+      <!-- <div class="popBtn">
+           Click here to get started!
+      </div> -->
   </div>
-  <div class="exitBtn" onclick="hidePop()">
+  <div class="exitBtn" (click)="hidePop()">
       X
   </div>
-</div> -->
+</div>
 <app-contact-form></app-contact-form>
