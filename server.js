@@ -48,7 +48,7 @@ io.on('connection', client => {
 
     client.on('newFormSubmit', (formData) => {
         console.log('new form submit request received');
-        var currentdate = new Date();
+        var currentdate = new Date().toLocaleString('en-US', {timeZone: 'America/Denver'});
         var dateTime = "" + (currentdate.getMonth()+1) + "/" + currentdate.getDate() + "/" +
         currentdate.getFullYear() + " @ " + currentdate.getHours() + ":" + currentdate.getMinutes() + 
         ":" + currentdate.getSeconds() + "";
