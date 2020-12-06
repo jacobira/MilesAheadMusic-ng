@@ -215,9 +215,14 @@
     width: 400px;
     right: 20px;
     bottom: 20px;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
     box-shadow: 0 0 10px black, 0 0 15px black;
     background-color: rgba(0,0,0,.8);
     z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media screen and (max-width: 450px){
         height: 300px;
@@ -238,6 +243,34 @@
                     height: 300px;
                     width: 300px;
                 }
+            }
+        }
+
+        .popText {
+            text-align: center;
+            font-size: 40px;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .popBtn {
+            height: 50px;
+            width: 300px;
+            border-radius: 25px;
+            background-color: black;
+            box-shadow: 0 0 10px white;
+            color: white;
+            font-family: 'Julius Sans One', sans-serif;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            margin-top: 40px;
+            cursor: pointer;
+
+            @media screen and (max-width: 450px){
+                width: 200px;
+                font-size: 20px;
             }
         }
     }
