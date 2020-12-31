@@ -1,3 +1,5 @@
+var hubspot: any;
+
 import { Component, OnInit } from '@angular/core';
 import { ServerLinkService } from '../server-link.service';
 
@@ -11,7 +13,10 @@ export class ContactFormComponent implements OnInit {
   constructor(private serverLink: ServerLinkService) { }
 
   ngOnInit() {
+    
   }
+
+  
 
   parentFirstName: string = "";
   parentLastName: string = "";

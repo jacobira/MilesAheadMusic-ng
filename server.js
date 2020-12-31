@@ -54,7 +54,7 @@ io.on('connection', client => {
         // ":" + currentdate.getSeconds() + "";
 
         sendEmail(currentdate, formData);
-
+        hubSpotSubmit(formData);
 
 // **Old code for database submission of email data:
 
@@ -101,6 +101,37 @@ io.on('connection', client => {
                 client.emit('formConfirm');
             }
         });
+    }
+
+    function hubSpotSubmit(data){
+        var info = JSON.parse(data);
+
+        var request = require("request");
+
+        var options = {method: 'POST',
+            url: 'https://api.hubapi.com/contacts/v1/contact/',
+            qs: {hapikey: '16bcedb2-4193-44f6-bf52-55f9c5a0202f'},
+            headers:
+                {'Content-Type': 'application/json'},
+                body: 
+                { properties: 
+                   [ { property: 'email', value: `${info.email}` },
+                     { property: 'firstname', value: `${info.firstname}` },
+                     { property: 'lastname', value: `${info.lastname}` },
+                     { property: 'website', value: '' },
+                     { property: 'company', value: '' },
+                     { property: 'phone', value: `${info.phone}` },
+                     { property: 'address', value: '' },
+                     { property: 'city', value: '' },
+                     { property: 'state', value: '' },
+                     { property: 'zip', value: '' } ] },
+               json: true };
+
+        request(options, function (error, response, body) {
+            if (error) throw new Error(error);
+            console.log(body);
+        });
+
     }
 
 // Old code for query of teachers list from database. Determined it was much easier
