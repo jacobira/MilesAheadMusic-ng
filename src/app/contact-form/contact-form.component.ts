@@ -10,7 +10,7 @@ import { ServerLinkService } from '../server-link.service';
 })
 export class ContactFormComponent implements OnInit {
 
-  constructor(private serverLink: ServerLinkService) { }
+  constructor(private serverLink: ServerLinkService) { }''
 
   ngOnInit() {
     
