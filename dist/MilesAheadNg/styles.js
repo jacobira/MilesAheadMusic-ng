@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, "body {\n  margin: 0;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qYWNvYmJhbGR3aW4vTXlDb2RlUHJvamVjdHMvZnJlZWxhbmNlV29yay9NaWxlc0FoZWFkTXVzaWMtbmcvc3JjL3N0eWxlcy5sZXNzIiwic3JjL3N0eWxlcy5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0ksU0FBQTtBQ0FKIiwiZmlsZSI6InNyYy9zdHlsZXMubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuYm9keSB7XG4gICAgbWFyZ2luOiAwO1xufSIsImJvZHkge1xuICBtYXJnaW46IDA7XG59XG4iXX0= */", '', '']]
+module.exports = [[module.i, "body {\n  margin: 0;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qYWNvYmJhbGR3aW4vZnJlZWxhbmNlV29yay9NaWxlc0FoZWFkTXVzaWMtTmcvc3JjL3N0eWxlcy5sZXNzIiwic3JjL3N0eWxlcy5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0ksVUFBQTtDQ0FIIiwiZmlsZSI6InNyYy9zdHlsZXMubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuYm9keSB7XG4gICAgbWFyZ2luOiAwO1xufSIsImJvZHkge1xuICBtYXJnaW46IDA7XG59XG4iXX0= */", '', '']]
 
 /***/ }),
 
@@ -272,9 +272,7 @@ function addStyle (obj, options) {
 
 	// If a transform function was defined, run it on the css
 	if (options.transform && obj.css) {
-	    result = typeof options.transform === 'function'
-		 ? options.transform(obj.css) 
-		 : options.transform.default(obj.css);
+	    result = options.transform(obj.css);
 
 	    if (result) {
 	    	// If transform returns a value, use that instead of the original css.
@@ -557,7 +555,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/jacobbaldwin/MyCodeProjects/freelanceWork/MilesAheadMusic-ng/src/styles.less */"./src/styles.less");
+module.exports = __webpack_require__(/*! /Users/jacobbaldwin/freelanceWork/MilesAheadMusic-Ng/src/styles.less */"./src/styles.less");
 
 
 /***/ })
