@@ -23,10 +23,15 @@ dbclient.connect();
 
 var transporter = nodemailer.createTransport({
     service: 'yahoo',
+    host: 'smtp.mail.yahoo.com',
+    port: 465,
+    secure: false,
     auth: {
         user: 'butler.milesaheadmusic@yahoo.com',
         pass: 'obviouslyAwesome97'
-    }
+    },
+    debug: false,
+    logger: true
 });
 
 io.on('connection', client => {
