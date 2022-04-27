@@ -25,7 +25,7 @@ var transporter = nodemailer.createTransport({
     service: 'yahoo',
     host: 'smtp.mail.yahoo.com',
     port: 465,
-    secure: false,
+    secure: true,
     auth: {
         user: 'butler.milesaheadmusic@yahoo.com',
         pass: 'obviouslyAwesome97'
