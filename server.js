@@ -12,7 +12,6 @@ const nodemailer = require('nodemailer');
 const {Client} = require('pg');
 // const conString = "postgres://postgres:Jjrhmjbb97$$@milesaheadmusicdb.ctcjl8pyfn9w.us-east-2.rds.amazonaws.com:5432/postgres";
 
-
 var dbclient = new Client({
     user: 'postgres',
     host: 'milesaheadmusicdb.ctcjl8pyfn9w.us-east-2.rds.amazonaws.com',
@@ -23,17 +22,23 @@ var dbclient = new Client({
 dbclient.connect();
 
 var transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
     auth: {
-        user: 'butler.milesaheadmusicutah@gmail.com',
-        pass: 'obviouslyAwesome97'
+        type: "OAuth2",
+        user: "butler.milesaheadmusicutah@gmail.com"
     }
 });
 
-
-
-
-
+transporter.set("oauth2_provision_cb", (user, renew, callback) => {
+    let accessToken = userTokens[user];
+    if (!accessToken){
+        return callback(new Error("Unknown user"));
+    } else {
+        return callback(null, accessToken);
+    }
+});
 
 io.on('connection', client => {
     console.log('Server connection successful: ' + client.id);
@@ -153,3 +158,4 @@ io.on('connection', client => {
 });
 
 io.listen(3333);
+console.log("started server");
