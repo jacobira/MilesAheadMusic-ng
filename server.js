@@ -22,21 +22,10 @@ var dbclient = new Client({
 dbclient.connect();
 
 var transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
+    service: 'yahoo',
     auth: {
-        type: "OAuth2",
-        user: "butler.milesaheadmusicutah@gmail.com"
-    }
-});
-
-transporter.set("oauth2_provision_cb", (user, renew, callback) => {
-    let accessToken = userTokens[user];
-    if (!accessToken){
-        return callback(new Error("Unknown user"));
-    } else {
-        return callback(null, accessToken);
+        user: 'butler.milesaheadmusic@yahoo.com',
+        pass: 'obviouslyAwesome97'
     }
 });
 
