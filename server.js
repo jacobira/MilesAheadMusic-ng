@@ -70,7 +70,7 @@ io.on('connection', client => {
     function sendEmail(time, data) {
         var form = JSON.parse(data);
         var mailOptions = {
-        from: 'butler.milesaheadmusicutah@gmail.com',
+        from: 'butler.milesaheadmusic@yahoo.com',
         to: 'milesaheadmusicutah@gmail.com',
         subject: 'New Contact Form Received!',
         html: 
